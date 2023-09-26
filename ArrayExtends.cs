@@ -19,16 +19,13 @@ public static class ArrayExtends
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static T Front<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr)
-    {
-        return p_arr[0];
-    }
+    public static T Front<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr) =>
+        p_arr[0];
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static bool IsEmpty<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr)
-    {
-        return p_arr.Count == 0;
-    }
+    public static bool IsEmpty<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr) =>
+        p_arr.Count == 0;
+
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T PopAt<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr, int position)
