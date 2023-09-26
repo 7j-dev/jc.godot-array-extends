@@ -26,12 +26,12 @@ public static class ArrayExtends
     public static bool IsEmpty<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr) =>
         p_arr.Count == 0;
 
-
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T PopAt<[MustBeVariant] T>(this Godot.Collections.Array<T> p_arr, int position)
     {
         T element = p_arr[position];
         p_arr.RemoveAt(position);
+        
         return element;
     }
 
